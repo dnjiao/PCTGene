@@ -82,7 +82,7 @@ public class AltImage {
 	
 	public int getAa(File file) {
 		String str = file.getName().toString();
-		String count = str.split("_")[2].split(".jpg")[0];
+		String count = str.split("_")[str.split("_").length - 1].split(".jpg")[0];
 		return Integer.parseInt(count);
 	}
 	
