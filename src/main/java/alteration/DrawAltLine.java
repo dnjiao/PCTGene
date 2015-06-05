@@ -29,7 +29,7 @@ public class DrawAltLine {
 				AltImage img = new AltImage(inFile, X_RNA, X_PRO, X_END, Y_TOP, Y_BOT);
 				String mut = args[1];
 				BufferedImage bi = drawMutation(img, mut);
-				File outFile = new File(inFile.getParent(), FilenameUtils.removeExtension(inFile.getName()) + mut + ".jpg");
+				File outFile = new File(inFile.getParent(), FilenameUtils.removeExtension(inFile.getName()) + "_" + mut + ".jpg");
 				ImageIO.write(bi, "jpg", outFile);
 				System.out.println(outFile.getName() + " created in " + outFile.getParent());
 			} catch (IOException e) {
